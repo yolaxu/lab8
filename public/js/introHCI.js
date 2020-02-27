@@ -18,12 +18,13 @@ function initializePage() {
 
 // init jQuery gestures  
 function initGestures() {
+	
 	$(function(){
-		$('.judge-img').bind('tapbold',tapholdHandler);
-		//console.log('get');
+		$('.judge-img').bind('taphold',tapholdHandler);
+		
 		function tapholdHandler(event){
 			var targetIDPrefix = event.target.id;
-			console.log('got prefix' + targetIDPrefix);
+			console.log('got prefix:' + targetIDPrefix);
 			$('#'+targetIDPrefix+'-bio').show();
 		}
 	});
